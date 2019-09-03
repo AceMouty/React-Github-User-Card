@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './subCard.scss'
+
 function SubCard(props) {
 	
 	return(

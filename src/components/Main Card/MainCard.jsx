@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './mainCard.scss'
+
 function MainCard(props) {
 	return(
 		<div className="mainCard-container">
@@ -11,7 +13,7 @@ function MainCard(props) {
 					className="mainCard-img"
 				/>
 			</div>
-			<div>
+			<div className="mainCard-text">
 				<h2>{props.user.name}</h2>
 				<h3>{props.user.location}</h3>
 				<a href={props.user.html_url} target="_blank">

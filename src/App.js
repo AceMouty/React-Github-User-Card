@@ -69,7 +69,7 @@ class App extends React.Component{
 					<MainCard user={this.state.userData}/>
 
 					{/* Fllowers Cards */}
-					<div className="subCard-container">
+					<div className="subCard-div">
 
 						{/* Loop through and render all the followers */}
 						{this.state.followers.map(follower => {

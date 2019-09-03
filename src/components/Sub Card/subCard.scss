@@ -1,0 +1,21 @@
+
+.subCard-container {
+	// border: 2px solid green;
+	margin: 15px 0;
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	padding: 10px;
+
+	@media(max-width: 500px){
+		width: 100%;
+	}
+
+	.subCard-img-container {
+		img{
+			width: 100%;
+			object-fit: fill;
+			border-radius: 10px;
+		}
+	}
+}
