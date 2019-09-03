@@ -1,10 +1,13 @@
 import React from 'react'
 
-function SubCard() {
+function SubCard(props) {
+	
 	return(
-		<div>
-			<h2>JohnDoe</h2>
-			<h3>Locaiton</h3>
+		<div className="subCard-container">
+			<div className="subCard-img-container">
+				<img src={props.follower.avatar_url} alt="A user avatar"/>
+			</div>
+			<h2>{props.follower.login}</h2>
 		</div>
 	)
 }

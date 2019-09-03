@@ -16,6 +16,7 @@ class App extends React.Component{
 			user: "",
 			userData: {},
 			followersUrl: "",
+			followers: []
 		}
 	}
 
@@ -31,6 +32,17 @@ class App extends React.Component{
 				followersUrl: res.data.followers_url
 			})
 		})
+		.then(() => {
+
+			// Make another axios call for the users and set the data to state
+			axios(this.state.followersUrl)
+			.then(res => {
+				console.log(res.data)
+				this.setState({...this.state, followers: res.data})
+			})
+			// End 2nd Axios call
+		})
+		.catch(err => console.log(err))
 	}
  
 	render() {
@@ -53,9 +65,12 @@ class App extends React.Component{
 
 					{/* Fllowers Cards */}
 					<div className="subCard-container">
-						<SubCard/>
+						
+						{/* Loop through and render all the followers */}
+						{this.state.followers.map(follower => {
+							return <SubCard key={follower.id} follower={follower}/>
+						})}
 					</div>
-
 				</div>
 			</div>
 		);
