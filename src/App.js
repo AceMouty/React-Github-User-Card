@@ -20,8 +20,9 @@ class App extends React.Component{
 		}
 	}
 
-	// Do something when the component mounts
+	// Make an axios call when the component mounts
 	componentDidMount() {
+
 		// Make call to the api to get the user info
 		axios(`https://api.github.com/users/AceMouty`)
 		.then(res => {
@@ -40,10 +41,14 @@ class App extends React.Component{
 				console.log(res.data)
 				this.setState({...this.state, followers: res.data})
 			})
+			.catch(err => console.log(err))
 			// End 2nd Axios call
+
 		})
 		.catch(err => console.log(err))
 	}
+
+	//Handle the submit and set state
  
 	render() {
 			return (
@@ -65,12 +70,13 @@ class App extends React.Component{
 
 					{/* Fllowers Cards */}
 					<div className="subCard-container">
-						
+
 						{/* Loop through and render all the followers */}
 						{this.state.followers.map(follower => {
 							return <SubCard key={follower.id} follower={follower}/>
 						})}
 					</div>
+
 				</div>
 			</div>
 		);
