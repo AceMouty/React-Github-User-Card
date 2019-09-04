@@ -16,11 +16,11 @@ function MainCard(props) {
 			<div className="mainCard-text">
 				<h2>{props.user.name}</h2>
 				<h3>{props.user.location}</h3>
-				<a href={props.user.html_url} target="_blank">
-					<h4>Github</h4>
-				</a>
 				<p>Following: {props.user.following}</p>
 				<p>Followers: {props.user.followers}</p>
+				<a href={props.user.html_url} target="_blank">
+					<i className="fab fa-github-square fa-5x"></i>
+				</a>
 			</div>
 		</div>
 	)

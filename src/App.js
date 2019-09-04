@@ -60,7 +60,8 @@ class App extends React.Component{
 					{/* Search for a Github user */}
 					<form className="search-form">
 						<input 
-							type="text" 
+							type="text"
+							placeholder="AceMouty" 
 							/>
 							<button>Seaerch</button>
 					</form>

@@ -1,24 +1,27 @@
-// Fonts to be used
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-h2, h3 {
-	font-family: 'Raleway', sans-serif;
-}
 
 // Container to hold application
 .app-container {
 	min-height: 100vh;
+	background-color: #474647;
 
 	.app{
-		border: 2px solid purple;
+		// border: 2px solid purple;
 		max-width: 950px;
 		margin: 0 auto;
+		background-color: #00A1E4;
 		
 		.subCard-div {
-			border: 2px solid red;
+			// border: 2px solid red;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-around;
+		}
+
+		form {
+			// border: 2px solid red;
+			display: flex;
+			justify-content: flex-end;
+			margin-right: 15px;
 		}
 	}
 }
